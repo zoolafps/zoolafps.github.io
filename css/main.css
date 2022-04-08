@@ -1,0 +1,184 @@
+:root{
+  --colorone: #333533;
+  --colortwo: #757bc8;
+  --colorthree: #242423;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+  font-size: 1rem;
+  font-family: 'Fredoka', sans-serif;
+  color: #ffff;
+  background: var(--colorone);
+}
+li{
+  list-style: none;
+}
+h1,
+h2{
+  color: var(--colortwo);
+}
+a{
+  text-decoration: none;
+  color: var(--colortwo);
+}
+.hidden{
+  overflow: hidden;
+}
+.center{
+  position: absolute;
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteiner .cbox{
+  display: none;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+.layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: right;
+  background-size: cover;
+}
+.layer:nth-child(1){
+  background-image: url(http://localhost/p/img/1.png);
+}
+
+
+/*#### NAVBAR #####*/
+.navbar{
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+  margin: 1rem 3rem;
+  width: auto;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar img{
+  height: 2.4rem;
+}
+.navbar .r-btn{
+  height: 2.4rem;
+  display: none;
+}
+
+/*#### HERO SECTION #####*/
+.hero{
+  position: absolute;
+  bottom: 60px;
+  margin: 0px;
+  padding: 0px 3rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.hero .sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.hero .sidebar img{
+  width: 2rem;
+  height: auto;
+}
+.hero img {
+  width: 30rem;
+  height: 70%;
+  animation-name: swip;
+  animation-duration: 5s;
+  position: relative;
+  transition: 3s ease-in-out;
+}
+.hero .box{
+  min-width: 20rem;
+  max-width: 30rem;
+}
+
+.banner{
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--colorthree);
+  border-top-right-radius: 400%;
+}
+.banner p{
+  margin-left: 3rem;
+}
+.banner .cards{
+  padding: 20px 2rem 0px;
+  display: flex;
+  align-items: flex-end;
+  height: 5rem;
+}
+.banner .cards .card{
+  margin: 0px 5px;
+  padding: 20px;
+  border-radius: 8px 8px 0px 0px;
+  width: 14rem;
+  height: 5.5rem;
+  color: #ededed;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 3px 0px 3px 3px #ededed;
+  background-size: cover; 
+  background-repeat: none;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  animation-name: card;
+  animation-duration: 5s;
+  position: relative;
+}
+.banner .cards .card:hover{
+  transition: .4s ease-in-out;
+  height: 9rem;
+}
+@keyframes swip {
+  0%{
+    left: -1000px;
+  }
+  50%{
+    left: -500px;
+  }
+  100%{
+    left: 0px;
+  }
+}
+@keyframes card {
+  0%{
+    left: -1000px;
+  }
+  50%{
+    left: -500px;
+  }
+  100%{
+    left: 0px;
+  }
+}
