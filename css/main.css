@@ -41,26 +41,6 @@ a{
   justify-content: center;
   align-items: center;
 }
-.conteiner .cbox{
-  display: none;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-}
-.layer{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-position: right;
-  background-size: cover;
-}
-.layer:nth-child(1){
-  background-image: url(http://localhost/p/img/1.png);
-}
-
 
 /*#### NAVBAR #####*/
 .navbar{
@@ -77,8 +57,7 @@ a{
 .navbar img{
   height: 2.4rem;
 }
-.navbar .r-btn{
-  height: 2.4rem;
+.btnham{
   display: none;
 }
 
@@ -92,17 +71,8 @@ a{
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
-}
-.hero .sidebar{
-  display: flex;
-  flex-direction: column;
-  gap: .9rem;
-}
-.hero .sidebar img{
-  width: 2rem;
-  height: auto;
+  justify-content: center;
+  gap: 10rem;
 }
 .hero img {
   width: 30rem;
@@ -122,22 +92,38 @@ a{
   width: 100%;
   position: absolute;
   bottom: 0px;
+}
+.banner-box{
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--colorthree);
-  border-top-right-radius: 400%;
 }
-.banner p{
+.banner-box .foo-inf{
   margin-left: 3rem;
+  width: 19rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.banner .cards{
+.banner-box .sidebar{
+  display: flex;
+  gap: .9rem;
+}
+.banner-box .sidebar img{
+  width: 1.5rem;
+  height: auto;
+}
+.banner-box .cards{
   padding: 20px 2rem 0px;
   display: flex;
   align-items: flex-end;
   height: 5rem;
 }
-.banner .cards .card{
+.banner-box .cards .card{
   margin: 0px 5px;
   padding: 20px;
   border-radius: 8px 8px 0px 0px;
@@ -156,7 +142,7 @@ a{
   animation-duration: 5s;
   position: relative;
 }
-.banner .cards .card:hover{
+.banner-box .cards .card:hover{
   transition: .4s ease-in-out;
   height: 9rem;
 }
@@ -180,5 +166,79 @@ a{
   }
   100%{
     left: 0px;
+  }
+}
+@media (max-width: 800px) {
+  body{
+    overflow: visible;
+  }
+  .navbar,
+  .hero,
+  .banner{
+    position: inherit;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+  }
+  .navbar{
+    margin: 20px 20px;
+    width: auto;
+    height: 30px;
+  }
+  .hero{
+    box-sizing: border-box;
+    margin: 0px auto;
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5px;
+  }
+  .hero .box{
+    width: 80%;
+  }
+  .hero img{
+    width: auto;
+    height: 50%;
+  }
+  .banner{
+    position: inherit;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner .banner-box{
+    position: inherit;
+    width: 100%;
+    height: 30rem;
+    background: var(--colorthree);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .banner .banner-box .foo-inf{
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
+  }
+  .banner .banner-box .cards{
+    position: inherit;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+  .banner .banner-box .cards .card{
+    border-radius: 0px;
+    max-width: 800px;
   }
 }
