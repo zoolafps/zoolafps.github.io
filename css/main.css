@@ -47,18 +47,33 @@ a{
   position: absolute;
   top: 0px;
   z-index: 100;
-  margin: 1rem 3rem;
-  width: auto;
+  margin: 20px 0px;
+  width: 100%;
   height: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar img{
+.navbar .logo{
+  margin-left: 3rem;
   height: 2.4rem;
 }
-.btnham{
-  display: none;
+.navbar .btn-lang{
+  z-index: 20;
+  display: inline-block;
+  margin: 20px;
+  padding: 0px;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #242423;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.navbar .btn-lang.show{
+  background: #ededed;
 }
 
 /*#### HERO SECTION #####*/
@@ -78,13 +93,27 @@ a{
   width: 30rem;
   height: 70%;
   animation-name: swip;
-  animation-duration: 5s;
+  animation-duration: 4s;
   position: relative;
-  transition: 3s ease-in-out;
+  transition: 4s ease-out;
 }
 .hero .box{
   min-width: 20rem;
   max-width: 30rem;
+}
+.hero .box.show{
+  display: none;
+}
+.hero .box-1{
+  display: none;
+  min-width: 20rem;
+  max-width: 30rem;
+  transition: .5s ease-in-out;
+  animation-name: swip;
+  animation-duration: 3s;
+}
+.hero .box-1.show{
+  display: block;
 }
 
 .banner{
@@ -104,14 +133,15 @@ a{
 }
 .banner-box .foo-inf{
   margin-left: 3rem;
-  width: 19rem;
+  width: 15rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .banner-box .sidebar{
   display: flex;
-  gap: .9rem;
+  align-items: center;
+  gap: 1rem;
 }
 .banner-box .sidebar img{
   width: 1.5rem;
@@ -150,9 +180,6 @@ a{
   0%{
     left: -1000px;
   }
-  50%{
-    left: -500px;
-  }
   100%{
     left: 0px;
   }
@@ -160,9 +187,6 @@ a{
 @keyframes card {
   0%{
     left: -1000px;
-  }
-  50%{
-    left: -500px;
   }
   100%{
     left: 0px;
@@ -186,6 +210,14 @@ a{
     width: auto;
     height: 30px;
   }
+  .navbar .logo{
+    margin: 0px;
+    padding: 0px;
+  }
+  .navbar .btn-lang{
+    margin: 0px;
+    padding: 0px;
+  }
   .hero{
     box-sizing: border-box;
     margin: 0px auto;
@@ -200,7 +232,14 @@ a{
     text-align: center;
     word-wrap: break-word;
   }
+  .hero .box-1{
+    width: 80%;
+    text-align: center;
+    word-wrap: break-word;
+  }
   .hero img{
+    margin: 0px;
+    padding: 0px;
     width: auto;
     height: 70%;
   }
@@ -245,7 +284,7 @@ a{
     padding: 20px;
     border-radius: 0px;
     width: 80%;
-    height: 8.5rem;
+    height: 10rem;
     animation-name: none;
     animation-duration: 0s;
   }
