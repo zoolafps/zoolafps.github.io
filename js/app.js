@@ -8,14 +8,16 @@ document.querySelector(".btn-lang").addEventListener("click", () => {
     write();
   });
 
-//funtion hamburguer menu
-function barsbtn(){
-  document.querySelector(".open").classList.toggle("show");
-  document.querySelector(".close").classList.toggle("show");
+//####################################################################
+
+//funtion news (news)
+function news(){
+  document.querySelector(".btn-news").classList.toggle("show");
+  document.querySelector(".main-hero").classList.toggle("dn");
+  document.querySelector(".main-seccion").classList.toggle("show");
   }
-document.querySelector(".open").addEventListener("click", () => {
-  barsbtn()
-});
-document.querySelector(".close").addEventListener("click", () => {
-  barsbtn()
+
+//activar funcion (news)
+document.querySelector("#news").addEventListener("click", () => {
+  news()
 });
