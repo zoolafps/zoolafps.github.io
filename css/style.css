@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap');
+
+:root {
+    --yellow: rgb(253, 181, 74);
+    --bg: #252525;
+    --cards: #333;
+    --hover: #252525;
+    --links: rgb(74, 157, 253);
+    --links-hover: rgb(60, 122, 194);
+}
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    background: #333;
+    font-family: 'Averia Serif Libre', cursive;
+    color: #f8f9fa;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.link {
+    color: var(--links);
+}
+
+.link:hover {
+    color: var(--links-hover);
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+/* textos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 25px;
+    font-size: 3em;
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+}
+
+.a {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.sa {
+    animation: atn 1s;
+}
+
+@keyframes atn {
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* main container */
+.main__screen {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* sections */
+.hero,
+.links,
+.portfolios {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+/* header */
+header.hero .profile_photo {
+    margin: 0 0 30px 0;
+    width: 100%;
+    max-height: 20rem;
+    border-radius: 0 0 80% 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header.hero .profile_photo .img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header.hero .container h1 {
+    color: var(--yellow);
+}
+
+header.hero .container p {
+    text-align: justify;
+}
+
+.menu__links li{
+    text-align: right;
+}
+
+/* portfolios */
+section.portfolios .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.portfolio{
+    display: block;
+    position: relative;
+    padding: 0px;
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.portfolio a.img_container{
+    display: none;
+}
+
+.portfolio:target{
+    display: block;
+    position: absolute;
+    left: 0px;
+    padding: 0px 0px 100px;
+    width: 100%;
+    height: 100vh;
+    background: #252525;
+    overflow-y:auto;
+}
+
+.portfolio:target a.img_container{
+    display: block;
+    width: 100%;
+    min-height: 20rem;
+    background: #f8f9fa;
+}
+
+.portfolio:target .portfolio_description{
+    z-index: 5;
+    position: sticky;
+    top: 0px;
+    margin: 0 auto;
+    width: 70%;
+    text-align: justify;
+}
+
+.portfolio:target .portfolio_description h4 {
+    z-index: 5;
+    position: sticky;
+    top: 0px;
+    background: #252525;
+}
+
+.portfolio:target .projects {
+    position: inherit;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.portfolio:target .projects li.project {
+    display: block;
+    position: relative;
+    left: 0px;
+    padding: 0px;
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    overflow: hidden;
+}
+.portfolio .projects li.project ul.slider{
+    display: none;
+}
+
+li.project:target{
+    display: block;
+    position: absolute;
+    left: 0px;
+    padding: 0px 0px 100px;
+    width: 100%;
+    height: 100vh;
+    background: #252525;
+    overflow-y:auto;
+}
+
+li.project:target .shadow_top{
+    z-index: 2;
+    position: sticky;
+    top: 0px;
+    margin: -100px 0 0 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.300));
+    box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.300);
+}
+
+li.project:target ul.slider {
+    display: block;
+    z-index: 5;
+    position: relative;
+    margin: 0 0 50px;
+    width: 100%;
+    min-height: 20rem;
+    background: #252525;
+    display: flex;
+}
+
+li.project:target .shadow{
+    margin: 0 0 70px;
+    width: 100%;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.596);
+    box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.548);
+}
+
+li.project:target .project_description{
+    margin: 0 auto;
+    width: 70%;
+    text-align: justify;
+}
+
+li.project:target .project_description h4 {
+    z-index: 5;
+    position: sticky;
+    top: 0px;
+}
