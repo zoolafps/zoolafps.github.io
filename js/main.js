@@ -11,20 +11,3 @@ function scroll() {
     }
 }
 window.addEventListener("scroll", scroll)
-
-/* slider que no funciona */
-const slider = document.querySelector('.slider'),
-    slides = Array.from(document.querySelectorAll('.slides'))
-
-let isDragging = false,
-    startPos = 0,
-    currentTranslate = 0,
-    prevTranslate = 0,
-    animationID = 0,
-    currentIndex = 0
-
-slides.forEach((slide, index) => {
-    const slideImage = slide.querySelector('img')
-    slideImage.addEventListener('dragstart', (e) => e.
-    preventDefault)
-})
