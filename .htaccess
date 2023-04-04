@@ -1,0 +1,22 @@
+#FRIENDLY_URL
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+
+#ANTI_FISGONES
+IndexIgnore *
+
+#CACHE_FILES
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType image/ico "access plus 1 month"
+    ExpiresByType image/svg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+   ExpiresByType image/jpeg "access plus 1 month"
+</IfModule>
