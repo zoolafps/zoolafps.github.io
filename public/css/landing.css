@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+body{
+     margin: 0px;
+     padding: 0px;
+     font-size: 18px;
+     font-weight: normal;
+     font-family: 'Fredoka', sans-serif;
+}
+a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."]{
+    display: none;
+}
+a{
+    color: #219ebc;
+    text-decoration: none;
+}
+
+/* ITEMS */
+.logo{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.title{
+    font-size: 25px;
+    font-family: 'Fugaz One', cursive;
+}
+.big-title{
+    margin: 0px 0px 2rem;
+    font-size: 30px;
+    font-family: 'Fugaz One', cursive;
+    color: #b32e39;
+}
+.sub-title{
+    margin: 0px 0px 1rem;
+    font-size: 20px;
+}
+.action-signal{
+    scale: 3;
+}
+.btn{
+    cursor: pointer;
+    margin: 2.5rem 0px 0px;
+    padding: 20px;
+    width: fit-content;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Fredoka', sans-serif;
+    background: #219ebc;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.btn:hover{
+    background: #023047;
+}
+.btn .action-signal:hover{
+    transform: translateX(0px);
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-50px);
+    
+}
+.sq_item{
+    padding: 25px;
+}
+.flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: auto;
+}
+.container{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+}
+
+
+/* secciones y cuerpo */
+.hero{
+    position: relative;
+    margin: 0px;
+    padding: 20px 2rem 0px;
+    height: 100vh;
+    color: #fff;
+    background-image: url('https://iteyplus.000webhostapp.com/public/img/colegio-itey-yopal.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(6px);
+}
+.hero .navbar{
+    width: 100%;
+    height: 40px;
+}
+.hero .container{
+    height: 80%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.brand-box{
+    margin: auto;
+    width: fit-content;
+    font-family: 'Fugaz One', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.hero .box{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: grid;
+    place-content: center;
+}
+.hero .box .action-signal{
+    animation: swip infinite 1s;
+    position: relative;
+    transition: 3s ease;
+}
+@keyframes swip {
+    0% {
+        bottom: 30px;
+    }
+    50% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: 30px;
+    }
+  }
+.hero .container .btn_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+.hero .container .big-title{
+        animation: title 5s;
+        position: relative;
+    }
+    @keyframes title {
+        0% {
+            left: 200px;
+        }
+        100% {
+            left: 0px;
+        }
+      }
+.section_two{
+    margin: 0px;
+    padding: 3.5rem 2rem;
+    background-color: #ccc;
+}
+.section_two .container{
+    flex-direction: column;
+}
+.section_three{
+    margin: 0px;
+    padding: 8rem 2rem;
+}
+.section_three .container{
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    gap: 30px;
+}
+.colum{
+    width: 100%;
+    height: auto;
+}
+.section_three .container .grid{
+    width: 200%;
+    max-width: 800px;
+    min-width: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.sq_item{
+    margin: 5px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background: #ccc;
+}
+.section_three .container .grid .sq_item{
+    color: #fff;
+}
+.sq_one{
+    background: #b32e39;
+}
+.sq_two{
+    background: #023047;;
+}
+.sq_three{
+    background: #219ebc;
+}
+.sq_four{
+    background: #ade8f4;
+}
+.section_four{
+    margin: 0px;
+    padding: 6rem 2rem;
+}
+.section_four .container{
+    display: flex;
+    gap: 3.5rem;
+}
+.section_four .container .colum .flex-box{
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+.section_four .container .colum .sq_item{
+    margin: 30px 0px;
+}
+.grid{
+    width: 100%;
+    max-width: 800px;
+    min-width: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.video_box{
+    background: #ccc;
+    border-radius: 20px;
+    width: auto;
+    height: 20rem;
+}
+.landing_video{
+    width: 100%;
+    height: 100%;
+}
+.footer{
+    margin: 0px;
+    padding: 3.5rem 2rem;
+    background-color: #ccc;
+}
+.footer .container{
+    display: flex;
+}
+.footer_menu{
+    margin: 0px 0px 2rem;
+    padding: 0px 8px;
+    max-width: 18rem;
+    list-style: none;
+}
+.footer_grid{
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.footer_grid li{
+    padding: 5px;
+    border-radius: 5px 10px;
+    background: #023047;
+}
+.sub_footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 880px) {
+    .hero{
+        height: auto;
+    }
+    .hero .container{
+        word-break:keep-all;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .section_three .container .grid{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

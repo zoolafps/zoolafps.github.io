@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root{
+    --font-color: #edf6f9;
+    --red-color: #ef476f;
+    --yellow-color: #ffd166;
+    --primary: #40916c/* #06d6a0 */;
+    --blue-color: #118ab2;
+    --green-color: #5e548e;
+    --bg: #231942;
+    --bg-dark: #343a40;
+    --bone: #ccc;
+}
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+body{
+     margin: 0px;
+     padding: 0px;
+     font-size: 18px;
+     font-family: 'Roboto';
+}
+a{
+    color: var(--blue-color);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--primary);
+    text-decoration: underline;
+    transition: .3s;
+}
+.contenedor__principal{
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-dark);
+    display: grid;
+    place-content: center;
+}
+.contenedor__principal .alerta{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 20px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    background: var(--bone);
+}
+.contenedor__principal .alerta.dn{
+    display: none;
+}
+.contenedor__principal .alerta #cerraralerta{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    margin: -20px 0px 0px 95%;
+    padding: 0px;
+    border: 0px solid transparent;
+    border-radius: 50%;
+    background: #ef476f;
+    display: grid;
+    place-content: center;
+}
+.contenedor__formulario{
+    width: 28rem;
+    height: 100%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    background: var(--bone);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.contenedor__formulario .cabecera{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenedor__formulario .cabecera .logo{
+    width: 50px;
+    height: 50px;
+}
+.contenedor__formulario .formulario{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 8px;
+}
+.contenedor__formulario .formulario .contenedor__archivo,
+.contenedor__formulario .formulario .contenedor__campo{
+    width: 100%;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+}
+.contenedor__formulario .formulario .contenedor__archivo i,
+.contenedor__formulario .formulario .contenedor__campo i{
+    color: var(--primary);
+}
+.contenedor__formulario .formulario .contenedor__campo .campo{
+    width: 100%;
+    padding: 5px 10px;
+    border: 0px solid transparent;
+    background: transparent;
+    user-select: none;
+    outline: none;
+    font-size: 16px;
+}
+::selection{
+    background: var(--bg-dark);
+}
+.contenedor__formulario .formulario .contenedor__archivo .archivo{
+    width: 90%;
+}
+.archivo::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.archivo::before {
+    content: 'selecciona o arrastra';
+    display: inline-block;
+    width: 100%;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    font-size: 10pt;
+}
+.contenedor__formulario .formulario .btn__enviar{
+    grid-column: 1/3;
+    width: 100%;
+    padding: 10px 10px;
+    color: var(--font-color);
+    border: transparent;
+    border-radius: 4px;
+    background: var(--primary);
+}
+.contenedor__formulario .informacion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 800px) {
+    .contenedor__formulario{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 2px solid transparent;
+        font-size: 16px;
+    }
+    .contenedor__formulario .formulario{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
