@@ -1,10 +1,7 @@
 <?php
 
-session_start();
-
 class App{
     function __construct(){
-        $ip = $_SESSION['ip'] = file_get_contents('https://api.ipify.org');
 
         $url = isset($_GET['url']) ? $_GET['url']: null;
         $url = rtrim($url, '/');
