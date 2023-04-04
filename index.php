@@ -1,8 +1,4 @@
 <?php
-/* $data = file_get_contents('http://192.168.20.21/zoolafps-3/backend/api/getAll/users');
-print_r ( $data); */
-/* print_r ( $data{1}[0]); */
-
 
 /* requerimientos */
 require_once 'config/config.php';
